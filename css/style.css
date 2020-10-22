@@ -1,3 +1,232 @@
+/* Genereal Styles */
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h2 {
+  font-size: 29px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+}
+
+body {
+  background-color: #bbb8b8;
+}
+
+body p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+  max-width: 75%;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  p {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* Grid Styles */
+
+@media (min-width: 768px) {
+  /*only applied on desktop*/
+
+  /* three columns only applied on desktop */
+  .grid-1-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* Card Styles */
+
+.card {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  overflow: auto;
+  margin-bottom: 0px;
+}
+
+/* Navbar Styles */
+
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > a > img {
+  height: 100px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 10 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#hamburger {
+  display: none;
+}
+
+#overlay {
+  display: none;
+}
+
+/*navigation mobile styles*/
+
+@media (max-width: 767px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  nav ul {
+    display: none;
+    max-width: 60vw;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  nav ul.active {
+    display: block;
+  }
+
+  nav ul li {
+    padding: 20px;
+  }
+  #hamburger {
+    display: block;
+    height: 30px;
+    width: auto;
+  }
+
+  #overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  #overlay.active {
+    display: block;
+  }
+}
+
+/*navigation  styles for desktop*/
+@media (min-width: 768px) {
+  nav {
+    padding: 0 40px;
+  }
+  nav ul {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/*Homepage video background*/
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 150%;
+  line-height: 1.4;
+}
+body {
+  margin: 0;
+}
+
+.viewport-header {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Syncopate", sans-serif;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  letter-spacing: 3vw;
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+  span {
+    display: block;
+    font-size: 10vw;
+    letter-spacing: -1vw;
+  }
+}
+
+main {
+  background: rgba(black, 0.66);
+  color: rgb(2, 0, 0);
+  position: relative;
+  padding: 1rem;
+  p {
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+}
 /* Homepage: Hover Over Page Links*/
 .container {
   position: relative;
@@ -39,14 +268,14 @@
   padding: 16px 32px;
 }
 
-/* slideshow style*/
+/* SLIDESHOW STYLES*/
 * {
   box-sizing: border-box;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
@@ -86,7 +315,7 @@
 }
 
 /* Caption text */
-.text {
+.slideshowtext {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -151,9 +380,10 @@
 footer {
   background: black;
   color: white;
-  padding: 20 20px;
+  padding: 15px 15px;
 }
 
 footer a {
   color: white;
+  font-size: 12 pt;
 }

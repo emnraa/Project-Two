@@ -12,12 +12,13 @@
   <body>
     <!--Nav Element-->
     <nav>
-      <a href="./index.html"
-        ><img src="./images/Logo Placeholder.jpg" alt="Logo"
-      /></a>
+      <a href="/index.html"><img src="/images/Jeans Logo.png" alt="Logo" /></a>
+      <img id="hamburger" src="./icons/menu.svg" alt="Menu" />
+      <div id="overlay"></div>
       <ul id="menu">
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/The-Process/index.html">The Process</a></li>
-        <li><a href="/Water-Waste/index.html">Water Waste</a></li>
+        <li><a href="/Water-Waste/index.html">Water</a></li>
         <li><a href="/Alternatives/index.html">Alternatives</a></li>
         <li><a href="/Credits/index.html">Credits</a></li>
       </ul>
@@ -27,12 +28,22 @@
       <!--remind myself to insert a video for the background-->
 
       <!-- The video as the background-->
-      <video autoplay muted loop id="myVideo">
-        <source src="./Background-Videos/Street Walking.mp4" type="video/mp4" />
-      </video>
+      <video
+        src="./Background-Videos/Street Walking.mp4"
+        autoplay
+        loop
+        playsinline
+        muted
+      ></video>
+
+      <header class="viewport-header">
+        <h1>
+          Jeans and the
+          <span>Environment</span>
+        </h1>
+      </header>
 
       <div class="content">
-        <h1>Heading</h1>
         <p>
           This is going to be the about paragraph 1. Lorem ipsum dolor sit, amet
           consectetur adipisicing elit. Sunt inventore, quis esse alias ut
@@ -47,45 +58,52 @@
           dignissimos aliquam cumque ratione, sint possimus impedit sit unde?
         </p>
       </div>
+      <section class="grid-1-3">
+        <!-- Brings you to The Process-->
+        <article class="card">
+          <div class="container">
+            <img
+              src="./images/The-Process.jpg"
+              alt="The-Process"
+              class="image"
+              style="width: 500px"
+            />
+            <div class="middle">
+              <div class="text">The Process</div>
+            </div>
+          </div>
+        </article>
 
-      <!-- Brings you to The Process-->
-      <div class="container">
-        <img
-          src="./images/Logo Placeholder.jpg"
-          alt="Avatar"
-          class="image"
-          style="width: 100%"
-        />
-        <div class="middle">
-          <div class="text">The Process</div>
-        </div>
-      </div>
+        <!-- Brings you to Water Waste-->
+        <article class="card">
+          <div class="container">
+            <img
+              src="./images/Water-Waste.jpg"
+              alt="Water"
+              class="image"
+              style="width: 500px"
+            />
+            <div class="middle">
+              <div class="text">Water Waste</div>
+            </div>
+          </div>
+        </article>
 
-      <!-- Brings you to Water Waste-->
-      <div class="container">
-        <img
-          src="./images/Logo Placeholder.jpg"
-          alt="Avatar"
-          class="image"
-          style="width: 100%"
-        />
-        <div class="middle">
-          <div class="text">Water Waste</div>
-        </div>
-      </div>
-
-      <!-- Brings you to Alternatives-->
-      <div class="container">
-        <img
-          src="./images/Logo Placeholder.jpg"
-          alt="Avatar"
-          class="image"
-          style="width: 100%"
-        />
-        <div class="middle">
-          <div class="text">Alternatives</div>
-        </div>
-      </div>
+        <!-- Brings you to Alternatives-->
+        <article class="card">
+          <div class="container">
+            <img
+              src="./images/Alternatives.jpg"
+              alt="Alternatives"
+              class="image"
+              style="width: 500px"
+            />
+            <div class="middle">
+              <div class="text">Alternatives</div>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
 
     <!-- Footer Element-->
